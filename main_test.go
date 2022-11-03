@@ -2,6 +2,7 @@ package main
 
 import (
 	builder "go-design-patterns/Creational/Builder"
+	factory "go-design-patterns/Creational/Factory"
 	"testing"
 )
 
@@ -14,6 +15,13 @@ func TestBuilder(t *testing.T) {
 	bldr.SetTxt("blah blah blah")
 
 	_, err := bldr.Build()
+	if err != nil {
+		t.Error(err)
+	}
+}
+
+func TestFactory(t *testing.T) {
+	_, err := factory.CreateVehicle("car", "porsche", "red")
 	if err != nil {
 		t.Error(err)
 	}

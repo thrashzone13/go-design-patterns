@@ -1,2 +1,2 @@
 # Go Design Patterns
-___
+Run `go test`
